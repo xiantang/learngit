@@ -2,7 +2,7 @@ from functools import total_ordering
 
 
 @total_ordering
-class Account:
+class Account:#帐号的类
     def __init__(self, owner, amount=0):
         self.owner = owner
         self.amount = amount
