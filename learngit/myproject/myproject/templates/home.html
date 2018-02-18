@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
   </head>
   <body>
-    <h1>Boards</h1>
-
-    <table border="1">
-      <thead>
+    <div class="container">
+        <ol class="breadcrumb my-4">
+            <li class="breadcrumb-item active">Boards</li>
+        </ol>
+    <table class="table">
+      <thead class="thead-inverse">
         <tr>
           <th>Board</th>
           <th>Posts</th>
@@ -23,14 +25,15 @@
           <tr>
             <td>
               {{ board.name }}<br>
-              <small style="color: #888">{{ board.description }}</small>
+              <small class="text-muted d-block">{{ board.description }}</small>
             </td>
-            <td>0</td>
-            <td>0</td>
+            <td class="align-middle">0</td>
+            <td class="align-middle">0</td>
             <td></td>
           </tr>
         {% endfor %}
       </tbody>
     </table>
+    </div>
   </body>
 </html>
