@@ -21,5 +21,8 @@ from boards import views
 urlpatterns = [
     url(r'^$', views.home, name='home'),  #mmp学了这么久才知道第一个参数是正则！
     url(r'^boards/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
+    # url(r'^boards/(?P<pk>\d+)/news$',views.new_topics,name='new_topics'),
+    url(r'^boards/(?P<pk>\d+)/new/$', views.new_topic, name='new_topic'),
     url(r'^admin/', admin.site.urls),
+
 ]
