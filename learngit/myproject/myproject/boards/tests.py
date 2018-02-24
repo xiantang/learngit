@@ -96,7 +96,7 @@ class NewTopicTests(TestCase):
         self.assertContains(response, 'href="{0}"'.format(board_topics_url))
 
     def test_csrf(self):  #检查防御
-        url = reverse('new_topic',kwargs=1)
+        url = reverse('new_topic',kwargs={'pk':1})
         response=self.client.get(url)
         self.assertContains(response,'csrfmiddlewaretoken')
 
