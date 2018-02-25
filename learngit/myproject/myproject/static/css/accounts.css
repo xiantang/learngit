@@ -1,0 +1,15 @@
+body{
+    background-color: #1d2124;
+}
+.logo{
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+.logo a{
+    color: rgba(0,0,0,.9);
+}
+
+.logo a:hover,
+.logo a:active{
+    text-decoration: none;
+}

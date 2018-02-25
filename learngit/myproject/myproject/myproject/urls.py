@@ -17,12 +17,15 @@ from django.conf.urls import url
 from django.contrib import admin
 from accounts import views  as accounts_views
 from boards import views
+from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),  #mmp学了这么久才知道第一个参数是正则！
     url(r'^boards/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
-    url(r'^signup/$',accounts_views.signup, name='sinup'),
+    url(r'^signup/$',accounts_views.signup, name='signup'),
     url(r'^boards/(?P<pk>\d+)/new/$', views.new_topic, name='new_topic'),
     url(r'^admin/', admin.site.urls),
-
+    url(r'^logout/$',auth_views.LogoutView.as_view(),name='logout'),#base view
+    url(r'^login/$', auth_views.LoginView.as_view(template_name='login.html'),name='login')
 ]
