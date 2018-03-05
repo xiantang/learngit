@@ -11,7 +11,7 @@
 {% for field in form %}
 <div>
     {{ field.label_tag }}
-    
+
     {% if form.is_bound %}
         {% if field.errors %}
             {% render_field field class="form-control is-invalid" %}
